@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Control flow stement</h1>
+    <p id="demo"></p>
+    <script>
+        // while loop
+        // let n=2;
+        // let i=1;
+        // let table ="";
+        // while(i<=10)
+        // {
+        //     table+="<br>"+n+" x "+i+" = "+n*i;
+        //     i++;
+        //     document.getElementById('demo').innerHTML=table;
+        // }
+        // do while loop
+        let name ="";
+
+        let i=0;  
+        do{
+            name +="<br>"+i;
+            i++;
+        }
+        while(i<10)
+        // document.getElementById('demo').innerHTML=name;
+    // for loop
+    let text="";
+    for(let k=0;k<19;k++){
+        text +="<br> the number is "+ k;
+    }
+    // document.getElementById('demo').innerHTML=text;
+    // break
+    const fruits=['apple','banana','mango','kiwi','papaya'];
+    let len=fruits.length;
+    let tex="";
+    for(let i=0;i<len;i++){
+        
+        if(i==3){
+            break;
+        }
+        tex +="The fruits is: "+fruits[i]+"<br>";
+    }
+    // document.getElementById('demo').innerHTML=tex;
+    // continue
+    const fru=['apple','banana','mango','kiwi','papaya'];
+    let le=fru.length;
+    let te="";
+    for(let j=0;j<le;j++){
+        
+        if(j==3){
+            continue;
+        }
+        te+="The fruits is: "+fru[j]+"<br>";
+    }
+    document.getElementById('demo').innerHTML=te;
+    </script>
+</body>
+</html>

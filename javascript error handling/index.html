@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript Error Handling</h1>
+    <p>please enter number between 5-10 only</p>
+    <input type="text" name="demo" id="demo">
+
+    <button type="button" onclick="myCalc()">Testing Value</button>
+    <p id="p1"></p>
+    <script>
+
+        // try {
+        //     alsdert('welcome to javascript');
+        // }
+        // catch (err) {
+        //     document.getElementById('demo').innerHTML = err.message;
+        // }
+
+        // try catch finally
+        function myCalc() {
+            const message = document.getElementById('p1');
+            message.innerHTML = "";
+            let x = document.getElementById('demo').value;
+            try {
+                if (x == "") throw "Is Empty";
+                if (isNaN(x)) throw "Is not a number";
+                x = Number(x);
+                if (x > 10) throw "Its too hign ";
+                if (x < 5) throw "its too low";
+            }
+            catch (err) {
+                message.innerHTML="Input" + err;
+            }
+            finally{
+                document.getElementById('demo').value="";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

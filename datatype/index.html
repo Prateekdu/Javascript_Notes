@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript data type</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <!-- STring
+    number
+    boolean 
+    array
+    objects -->
+
+    <script>
+        // String
+        let course="mongodb"
+        document.getElementById('demo').innerHTML=course;
+        // number 
+         let num =32;
+         let num1=109.78;
+         let num2="22";
+         document.getElementById('demo').innerHTML=num+num2;
+         document.getElementById('demo').innerHTML=num2+num1;
+        //  Boolean
+        let n1=2;
+        let n2=2;
+        let n3= 5;
+        document.getElementById('demo').innerHTML=(n1==n2)+"<br>"+(n2==n3);
+        // Array
+        const fruits=['apple','banana','Mango','lichi'];
+        document.getElementById('demo').innerHTML=fruits;
+        document.getElementById('demo').innerHTML=fruits.toString();
+        document.getElementById('demo').innerHTML=fruits.reverse();
+        document.getElementById('demo').innerHTML=fruits.sort();
+        // object
+        const person={
+            name:'Prateek',
+            age:21,
+            pincode:281004,
+            email:'prateekdubey903@gmail.com'
+        };
+        document.getElementById('demo1').innerHTML=person.name;
+    </script>
+</body>
+</html>

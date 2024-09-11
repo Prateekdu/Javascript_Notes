@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <h1>Java script data visualizatin charts</h1>
+   
+    <div id="myChart" style="width: 100%; max-width: 600px;height: 500px;"></div>
+    <script>
+        google.charts.load('current',{packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart(){
+            //setting data
+            let data=google.visualization.arrayToDataTable([
+            // ['price','size'],
+            // [50,7],[60,6],[70,8],[90,9],[100,9],[110,10],[120,10],[130,11],[140,12],[150,13],[200,18]
+            ['Country','Pincode'],
+            ['USA',12],['INDIA',13],['PAK',14],['AUS',15],['KOREA',16]//-- this data for bar Chart/ pie chart
+            ]);
+            // set option
+            let options={
+                title:'COUNTRY PINCODE',// this is for bar char/pie chart
+                // hAxis:{title:'square meters'},
+                // vAxis:{title:'Price in dollars'},
+                // legend:'none'
+                is3D:true
+            };
+            // let chart=new google.visualization.LineChart(document.getElementById('myChart'));
+            // let chart=new google.visualization.ScatterChart(document.getElementById('myChart'));
+            // let chart=new google.visualization.BarChart(document.getElementById('myChart'));
+            let chart=new google.visualization.PieChart(document.getElementById('myChart'));
+            chart.draw(data,options);
+        };
+    </script>
+</body>
+</html>

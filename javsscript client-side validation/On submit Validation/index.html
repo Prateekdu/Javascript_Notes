@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function validation(){
+        let x=document.forms['myReg']['fname'].value;
+        let y=document.forms['myReg']['email'].value;
+        if(x==""){
+            alert('name must be filled');
+            return false;
+        }
+        if(y==""){
+            alert('Email must be filled');
+            return false;
+        }
+       }
+    </script>
+</head>
+
+    <h1>javascript client-side validation</h1>
+    <!-- <p id="demo"></p> -->
+    <form name="myReg" method="post" onsubmit=" return validation()">
+        Name:<input type="text" name="fname"><br><br>
+        Email:<input type="email" name="email"><br><br>
+        <input type="submit" value="submit">
+    </form>
+
+   
+</body>
+</html>

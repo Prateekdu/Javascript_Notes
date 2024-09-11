@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript conditional operator</h1>
+    <p id="demo">Good Morning</p>
+    <p id="demo1"></p>
+    <script> 
+    // if statement
+        if(new Date().getHours()<24){
+        document.getElementById('demo').innerHTML="good night" ;
+    }
+    // if else statement
+    if(new Date().getHours()<2){
+        document.getElementById('demo').innerHTML="good night" ;
+    }
+    else{
+       
+        document.getElementById('demo').innerHTML="good evening " ;
+    
+    }
+    // if else if statement
+    const hour=24;
+    let message;
+    if(hour<10){
+        message="Good Morning";
+    }
+    else if(hour<16){
+        message="Good Afternoon";
+    }
+    else{
+        message="good evenilng";
+    }
+    document.getElementById('demo1').innerHTML=message;
+    // Switch case Statement
+    let day;
+    switch(new Date().getDay()){
+        case 0:
+            day="sunday";
+            break;
+        case 1:
+            day="Monday";
+            break;
+        case 2:
+            day="Tuesday";
+            break;
+        case 3:
+            day="wednesday";
+            break;
+        case 4:
+            day="Thrusday";
+            break;
+        case 5:
+            day="Friday";
+            break;
+        case 6:
+            day="saturday";
+            break;
+        default:
+            day="great day";
+            
+    }
+    document.getElementById('demo1').innerHTML="Today day is : "+ day;
+    </script>
+</body>
+</html>

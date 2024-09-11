@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Operator</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        // Arthematic operation
+        let a=20;
+        let b=30;
+        document.getElementById('demo').innerHTML=a ** 2;
+        // Assignment operator
+        let c=4;
+        c=c+7;
+
+        document.getElementById('demo').innerHTML=c;
+        // comparision operator
+        let d=10;
+        let e='10';
+
+        document.getElementById('demo').innerHTML=(e===10);
+        document.getElementById('demo').innerHTML=typeof(e);
+        // logical operator
+// and or &&,or || 
+        let a1=10;
+        let b1=20;
+
+        document.getElementById('demo').innerHTML=(a<20 && b<30) ;
+        document.getElementById('demo').innerHTML=!(a<20 || b>4) ;
+    </script>
+</body>
+</html>
